@@ -66,3 +66,22 @@ model Product {
   orders      Order[]
   updatedAt   DateTime @updatedAt
 }
+
+model Warehouse {
+  capacity          Int?
+  contactEmail      String?
+  createdAt         DateTime                        @default(now())
+  createdDate       DateTime?
+  id                String                          @id @default(cuid())
+  lastUpdated       DateTime?
+  location          String?
+  managerName       String?
+  myname            String?
+  name              String?
+  operationalStatus EnumWarehouseOperationalStatus?
+  updatedAt         DateTime                        @updatedAt
+}
+
+enum EnumWarehouseOperationalStatus {
+  Option1
+}
